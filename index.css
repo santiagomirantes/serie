@@ -1,0 +1,200 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+@keyframes rainbow{
+    0%{
+        box-shadow: 0px 0px 5px red;
+    }
+    25%{
+        box-shadow: 0px 0px 5px blue;
+    }
+    50%{
+        box-shadow: 0px 0px 5px green;
+    }
+    
+    75% {
+        box-shadow: 0px 0px 5px yellow;
+    }
+
+    100%{
+        box-shadow: 0px 0px 5px red;
+    }
+}
+@keyframes t_rainbow{
+    0%{
+        color: red;
+    }
+    25%{
+        color: green;
+    }
+    50%{
+        color: blue;
+    }
+    
+    75% {
+        color: yellow;
+    }
+
+    100%{
+        color: red;
+    }
+}
+@keyframes flash{
+    0%{
+        color: darkred;
+    }
+    50%{
+        color: white;
+    }
+    100%{
+        color: darkred;
+    }
+}
+body{
+    background-color: rgb(7,7,7);
+}
+h1{
+    text-align: center;
+    font-size: 10vw;
+    margin: 5vw 0vw;
+}
+#inputs{
+    display: flex;
+    position: relative;;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    pointer-events: none;
+}
+#inputs h2{
+    position: absolute;
+    transform: translate(-50%,-50%) rotate(315deg);
+    top: 50%;
+    left: 50%;
+    font-size: 4.5vw;
+    color: red;
+    z-index: 5;
+
+}
+#text{
+    font-size: 3vw;
+    background-color: black;
+    border:2px solid white;
+    border-radius: 10px;
+    text-shadow:0px 0px 5px white;
+    width: 80vw;
+    animation: rainbow 1s infinite linear;
+    filter: blur(10px);
+}
+#text:focus{
+    outline: none;
+    border: 2px solid white;
+}
+#submit{
+    font-size: 3vw;
+    margin-top: 5vh;
+    width: 30vw;
+    background-color: white;
+    color: var(--col);
+    border-radius: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    animation: t_rainbow 1s infinite linear;
+    transition:background-color 0.5s,border 0.5s;
+    filter: blur(10px);
+}
+#submit:hover{
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+.hidden{
+    display: none;
+}
+.found{
+    margin-top: 5vh;
+}
+.found h2{
+    color: yellow;
+}
+.found h2 span{
+    color: blue;
+}
+
+#links{
+    margin-top: 15vh;
+    margin-left: 2vw;
+    font-size: 2.5vw;
+}
+#links_list{
+    margin-left: 2vw;
+}
+#links p span{
+    color: gold;
+}
+#links a{
+    font-size: 2vw;
+    color: blue;
+}
+
+#special{
+    padding:10vh 0vw
+}
+
+#special h2{
+    font-size: 5vw;
+    text-align: center;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    color: darkred;
+    font-family: "Metal Mania",serif;
+}
+
+#special h2 #flash{
+    font-family: "Metal Mania",serif;
+    animation: flash 0.1s steps(1) infinite;
+}
+
+#special #countdown{
+    font-size: 10vw;
+    text-align: center;
+    margin:20vh 0vw;
+}
+
+@media (max-width:700px) {
+    h1{
+       font-size: 15vw;
+       margin:5vh 0vw;
+    }
+    #inputs h2{
+        font-size: 10vw;
+    }
+    #text{
+        font-size: 7vw;
+        min-height: 7.5vh;
+    }
+    #submit{
+        font-size: 10vw;
+        width: 80vw;
+    }
+    #links{
+        font-size: 10vw;
+        margin-left: 4vw;
+    }
+    #links_list{
+        margin-left: 5vw;
+    }
+    #links a{
+        font-size: 8vw;
+    }
+
+    #special h2{
+        font-size: 10vw;
+    }
+
+}
