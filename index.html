@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>7DOWN - BOVEDA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Metal+Mania&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <h1>BOVEDA</h1>
+    <div id="inputs">
+      <h2>CLAUSURADO</h2>
+      <input type="text" id="text" placeholder="Insertá tu código" />
+      <input type="button" id="submit" value="Enviar" />
+    </div>
+
+    <div class="hidden">
+      <div class="found">
+        <h2>DESBLOQUEASTE ALGO: <span class="content"></span></h2>
+      </div>
+    </div>
+
+    <div class="show"></div>
+
+    <div id="links">
+      <p>
+        Se han extraido <span id="links_count"></span> códigos de la boveda
+        exitosamente.
+      </p>
+      <ul id="links_list"></ul>
+    </div>
+
+    <div id="special">
+      <h2>EL <span id="flash">RANCIOMAGEDÓN</span> ESTÁ VINIENDO</h2>
+
+      <h3 id="countdown"><span id="days"></span>:<span id="hours"></span>:<span id="minutes"></span>:<span id="seconds"></span></h3>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
