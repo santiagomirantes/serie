@@ -37,7 +37,7 @@
     const minutesEl = document.querySelector("#minutes")
     const secondsEl = document.querySelector("#seconds")
 
-    let ms = new Date(2025, 1, 18, 0, 0, 0, 0) - Date.now()
+    let ms = new Date(2025, 1, 17, 0, 0, 0, 0) - Date.now()
 
     const countdown = setInterval(() => {
         ms -= 1000
